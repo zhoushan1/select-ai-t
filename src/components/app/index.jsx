@@ -4,6 +4,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Layout from '../layout'
 import Translate from '@/pages/translate'
 import Chat from '@/pages/chat'
+import Setting from '@/pages/setting'
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: '/chat',
         element: <Chat />,
+      },
+      {
+        path: '/setting',
+        element: <Setting />,
       },
     ],
   },
