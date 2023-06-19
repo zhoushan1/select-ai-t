@@ -1,7 +1,7 @@
 import React from 'react'
 import { ConfigProvider } from 'antd'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Layout from '../layout'
+import Layout from '@/components/Layout'
 import Translate from '@/pages/translate'
 import Chat from '@/pages/chat'
 import Setting from '@/pages/setting'
@@ -13,47 +13,46 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Translate />,
+        element: <Translate />
       },
       {
         path: '/chat',
-        element: <Chat />,
+        element: <Chat />
       },
       {
         path: '/setting',
-        element: <Setting />,
-      },
-    ],
-  },
+        element: <Setting />
+      }
+    ]
+  }
 ])
 
 export default function App() {
   return (
-      <ConfigProvider
-        theme={{
-          token: {
-            colorPrimary: '#3d3df5',
-            colorPrimaryHover: '#3d3df5',
-            wireframe: false,
-            // borderRadius: 8,
-            // borderRadiusSM: 6,
-            // borderRadiusXS: 4,
+    <ConfigProvider
+      theme={{
+        token: {
+          colorPrimary: '#3d3df5',
+          colorPrimaryHover: '#3d3df5',
+          wireframe: false
+          // borderRadius: 8,
+          // borderRadiusSM: 6,
+          // borderRadiusXS: 4,
+        },
+        components: {
+          Input: {
+            colorBorder: 'transparent'
           },
-          components: {
-            Input: {
-              colorBorder: 'transparent',
-            },
-            InputNumber: {
-              colorBorder: 'transparent',
-            },
-            Select: {
-              colorBorder: 'transparent',
-            },
+          InputNumber: {
+            colorBorder: 'transparent'
           },
-        }}
-      >
-        <RouterProvider router={router} />
-      </ConfigProvider>
- 
+          Select: {
+            colorBorder: 'transparent'
+          }
+        }
+      }}
+    >
+      <RouterProvider router={router} />
+    </ConfigProvider>
   )
 }
