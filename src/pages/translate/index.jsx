@@ -107,7 +107,7 @@ export default function Translate() {
       </div>
       <div className={styles.chatWrap}>
         <Button
-          type="text"
+          // type="text"
           icon={
             <MessageOutlined
               style={{

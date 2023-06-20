@@ -1,6 +1,10 @@
-# Tauri + React
+# Tauri + React + vite
 
 This template should help get you started developing with Tauri and React in Vite.
+
+- eslint
+- react-redux
+- less
 
 ## Recommended IDE Setup
 
